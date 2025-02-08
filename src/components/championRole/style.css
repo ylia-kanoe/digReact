@@ -1,0 +1,23 @@
+.championRole {
+    width: 130px;
+    border: 1px solid rgb(200, 170, 110);
+    padding: 8px;
+}
+
+.championRoleContainer {
+    text-align: center;
+    background-color: rgb(10 16 29);
+    padding: 9px;
+}
+
+.role {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.roleName {
+    color: rgb(200, 170, 110);
+    text-transform: uppercase;
+    font-size: 10px;
+
+}

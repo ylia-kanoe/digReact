@@ -1,11 +1,15 @@
-import React from 'react';
-import { Header } from './Header';
+import { ListChampions } from "./listChampions"
 
 export function Home() {
-  return (
-    <div>
-        <Header basket={[]} sum={0}/>
-      <h1>Домашняя страница</h1>
-    </div>
-  )
+
+    return (<>
+        <div className="container">
+            <div className="homeText">
+                <p>ВЫБЕРИТЕ</p>
+                <h1 className="homeTitle">ЧЕМПИОНА</h1>
+            </div>
+            <ListChampions />
+        </div>
+    </>)
+
 }

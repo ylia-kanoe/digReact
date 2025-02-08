@@ -1,0 +1,43 @@
+.championText {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    max-width: 700px;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+.championImage {
+    width: 100%;
+}
+
+.championTitle {
+    color: rgb(200, 170, 110);
+    font-weight: 700;
+    font-size: 32px;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.championName {
+    font-size: 72px;
+    margin: 0;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.championLore {
+    line-height: 26px;
+}
+
+.championShadow:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 897px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6980042016806722) 28%, rgba(255, 255, 255, 0) 100%);
+}

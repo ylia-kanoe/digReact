@@ -1,0 +1,11 @@
+
+.championTitleH2 {
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.championSkins {
+    padding-top: 50px;
+}
