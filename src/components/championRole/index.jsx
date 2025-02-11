@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import styles from "./championRole.module.scss"
 
 export function ChampionRole(props) {
     const listRole = {
@@ -12,13 +12,13 @@ export function ChampionRole(props) {
     }
 
     return (
-        <div className="championRole">
-            <div className="championRoleContainer">
-                <p className="role">Роль</p>
-                <p className="roleName">
+        <div className={styles.championRole}>
+            <div className={styles.championRoleContainer}>
+                <p className={styles.role}>Роль</p>
+                <p className={styles.roleName}>
                     {props.tags.map((item, i) => {
                         return (
-                            <span>
+                            <span key={i}>
                                 {i > 0 ? ' / ' + listRole[item] : listRole[item]}
                             </span>
                         )

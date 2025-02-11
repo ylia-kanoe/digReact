@@ -1,4 +1,3 @@
-
 .listChampions {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0px, 1fr));
@@ -14,18 +13,17 @@
 .champions:last-child {
 	flex-grow: 1;
 }
+
 .imageContainer {
-    overflow: hidden;
+	overflow: hidden;
 }
+
 .championsImage {
 	width: 100%;
-    transform: scale(1.1);
-    transition: 0.3s;
+	transform: scale(1.1);
+	transition: 0.3s;
 }
-.championsImage:hover {
-    transform: scale(1.2);
-    transition: 0.3s;
-}
+
 .championsName {
 	position: absolute;
 	bottom: 0;
@@ -39,4 +37,14 @@
 	font-weight: 700;
 	padding: 15px;
 	margin: 0;
+}
+
+.champions:hover .championsImage {
+	transform: scale(1.2);
+	transition: 0.3s;
+}
+
+.champions:hover .championsName {
+	background-color: rgb(59, 67, 83);
+	transition: background-color 0.2s;
 }

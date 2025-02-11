@@ -1,0 +1,23 @@
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+.homeText,
+.homeTitle {
+    text-align: center;
+}
+
+.homeText {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+
+.homeTitle {
+    font-style: italic;
+    font-size: 64px;
+    padding-bottom: 16px;
+    font-weight: 900;
+    margin: 0;
+}

@@ -1,0 +1,109 @@
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+.championSkills {
+    background-color: rgb(10 20 40);
+    padding: 100px 0;
+    color: rgb(255, 255, 255);
+}
+
+.championSkillsTitle {
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.championSkillBlock {
+    display: flex;
+    grid-gap: 30px;
+}
+
+.championSkillsListItems {
+    width: 50%;
+}
+
+.championSkillInfo {
+    width: 50%;
+    border: 1px solid rgb(200, 170, 110);
+    padding: 0 10px 20px;
+}
+
+.championSkilllist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.skillItem {
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.skillItem:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.skillInfo {
+    display: none;
+    text-align: center;
+}
+
+.skillInfo.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.skillItemImage {
+    filter: brightness(0.5);
+}
+
+.skillItem.active .skillItemImage {
+    filter: brightness(1);
+}
+
+p.skillInfoName {
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.skillInfoKey,
+.skillItemName {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    line-height: 23px;
+}
+
+.skillInfoKey {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.skillItem.active .skillItemName {
+    color: rgb(255, 255, 255);
+}
+
+.skillInfoDescription {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+
+}

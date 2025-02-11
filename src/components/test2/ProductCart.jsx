@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 import {ProductList} from "./ProductList";
-import {Basket} from "./Basket";
 import { Header } from "./Header";
 
 export function ProductCart() {
@@ -22,14 +20,6 @@ export function ProductCart() {
         })
     }
 
-   /* function addLike(obj){
-           
-    }
-
-    function removeLike(obj){
-        
-    }*/
-
     return (
         <>
             <Header basket={basket} sum={sum}/>
@@ -38,21 +28,3 @@ export function ProductCart() {
         </>
     )
 }
-
-
-
-    /*const [data, setData] = useState([basket, sum]);
-
-    useEffect(() => {
-        setData([basket, sum])
-        localStorage.setItem('dataKey', JSON.stringify(data));
-    }, [sum]);
-    
-    const [dataOpen, setDataOpen] = useState(() => {
-    const saved = localStorage.getItem("dataKey");
-    const initialValue = JSON.parse(saved);
-    console.log(saved)
-    return initialValue || "";
-    });
-*/
-

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './style.scss'
 
 export function Basket(props) {
     let classBasketIcon = props.basket.length !== 0 ? 'basket__iconNum' : 'close'

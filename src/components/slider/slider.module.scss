@@ -22,6 +22,7 @@
 .sliderItem {
     width: 210px;
     list-style: none;
+    cursor: pointer;
 }
 
 .sliderItemImage {
@@ -29,9 +30,14 @@
     padding: 4px;
 }
 
-.sliderItem.active .sliderItemImage {
-    border: 1px solid rgb(200, 170, 110);
+.sliderItem {
+    &.active {
+        & .sliderItemImage {
+            border: 1px solid rgb(200, 170, 110);
+        }
+    }
 }
+
 
 .sliderItemTitle {
     color: rgb(153, 153, 153);
@@ -40,32 +46,46 @@
     text-transform: uppercase;
 }
 
-.sliderItem.active .sliderItemTitle {
-    color: rgb(200, 170, 110);
+.sliderItem {
+    &.active {
+        & .sliderItemTitle {
+            color: rgb(200, 170, 110);
+        }
+    }
 }
+
 .sliderControl {
     display: flex;
     align-items: center;
 }
+
 .indicator {
     height: 2px;
     width: 100%;
     background-color: rgb(188, 188, 188);
 
 }
-.indicator div {
-    width: 10px;
-    background-color: #000;
-    height: 2px;    
-    transition: width 0.7s ease-out;
+
+.indicator {
+    & div {
+        width: 10px;
+        background-color: #000;
+        height: 2px;
+        transition: width 0.7s ease-out;
+    }
 }
+
 .sliderButton {
     border: none;
     background: #eeeeee00;
     color: rgb(200, 170, 110);
     font-size: 30px;
+    cursor: pointer;
 }
 
-.sliderButton.left {
-    transform: rotate(180deg) translateY(-4px);
+.sliderButton {
+    &.left {
+        transform: rotate(180deg) translateY(-4px);
+    }
+
 }

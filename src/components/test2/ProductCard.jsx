@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './style.scss'
 
 export function ProductCard(props) {
 

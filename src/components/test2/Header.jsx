@@ -1,4 +1,5 @@
 import { Basket } from "./Basket";
+import './style.scss'
 
 export function Header(props) {
     return (

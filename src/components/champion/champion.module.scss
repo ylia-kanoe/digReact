@@ -1,3 +1,8 @@
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+
 .championText {
     position: absolute;
     top: 0;
@@ -30,6 +35,10 @@
 
 .championLore {
     line-height: 26px;
+}
+
+.championShadow {
+    height: 897px;
 }
 
 .championShadow:after {
