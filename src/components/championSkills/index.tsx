@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styles from "./championSkills.module.scss"
+import React from "react";
+import { championSkillsPropsType } from "./types";
 
-export function ChampionSkills(props) {
+export function ChampionSkills(props: championSkillsPropsType) {
     const [activeSkills, setActiveSkills] = useState(props.passive.name)
 
-    function skillClick(name) {
+    function skillClick(name: string) {
         setActiveSkills(name)
     }
 
@@ -46,10 +48,9 @@ export function ChampionSkills(props) {
                             return (
                                 <div key={i} className={`${styles.skillInfo} ${activeSkills === item.name ? styles.active : ''}`}>
                                     <p className={styles.skillInfoName}>{item.name}</p>
-                                    <p className={styles.skillInfoKey}>{item.id.toString().slice(-1)}</p>
+                                    <p className={styles.skillInfoKey}>{item.id?.toString().slice(-1)}</p>
                                     <p className={styles.skillInfoDescription}>{item.description.replace(/<[^>]*>/g, '')}</p>
                                 </div>
-
                             )
                         })}
                     </div>

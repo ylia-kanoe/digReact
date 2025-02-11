@@ -1,19 +1,19 @@
 import { useState } from "react";
 import styles from '../slider/slider.module.scss'
+import { sliderPropsType } from "./types";
+import React from "react";
 
-export function Slider(props) {
-    const [mainImg, setMainImg] = useState("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + props.id + "_0.jpg")
+export function Slider(props: sliderPropsType) {
+    const [mainImg, setMainImg] = useState(props.src + props.id + "_0.jpg")
     const [active, setActive] = useState(0)
     const [sliderTransform, setSliderTransform] = useState(0)
     const [sliderIndicator, setSliderIndicator] = useState(0)
 
-    const massImage = []
-    props.skins.map(item => {
-        massImage.push(item.num)
-    })
+    const massImage: number[] = []
+    props.skins.map(item => massImage.push(item.num))
 
-    function nextImage(num) {
-        setMainImg("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + props.id + "_" + num + ".jpg")
+    function nextImage(num: number) {
+        setMainImg(props.src + props.id + "_" + num + ".jpg")
         setActive(num)
         if (massImage.length - massImage.indexOf(num) > 5) {
             setSliderTransform(-(massImage.indexOf(num) * 230))
@@ -33,7 +33,7 @@ export function Slider(props) {
                     return (
                         <li key={i} className={`${styles.sliderItem} ${item.num === active ? styles.active : ''}`} onClick={() => nextImage(item.num)}>
                             <img className={styles.sliderItemImage}
-                                src={"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + props.id + "_" + item.num + ".jpg"}
+                                src={props.src + props.id + "_" + item.num + ".jpg"}
                                 alt={item.name} />
                             <p className={styles.sliderItemTitle}>{item.name === 'default' ? props.name : item.name}</p>
                         </li>

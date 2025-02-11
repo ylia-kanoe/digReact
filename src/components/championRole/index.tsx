@@ -1,16 +1,8 @@
 import React from "react";
 import styles from "./championRole.module.scss"
+import { championRolePropsType, Roles } from "./types";
 
-export function ChampionRole(props) {
-    const listRole = {
-        "Fighter": "Воин",
-        "Assassin": "Убийца",
-        "Mage": "Маг",
-        "Marksman": "Стрелок",
-        "Tank": "Танк",
-        "Support": "Поддержка",
-    }
-
+export function ChampionRole(props: championRolePropsType) {
     return (
         <div className={styles.championRole}>
             <div className={styles.championRoleContainer}>
@@ -19,7 +11,7 @@ export function ChampionRole(props) {
                     {props.tags.map((item, i) => {
                         return (
                             <span key={i}>
-                                {i > 0 ? ' / ' + listRole[item] : listRole[item]}
+                                {i > 0 ? ` / ${Roles[item as keyof typeof Roles]} `: Roles[item as keyof typeof Roles]}
                             </span>
                         )
                     })}

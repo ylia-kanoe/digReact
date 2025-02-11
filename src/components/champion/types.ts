@@ -1,4 +1,5 @@
-type championSkills = {
+
+export type championSkills = {
     id?: string,
     name: string,
     description: string,
@@ -7,7 +8,7 @@ type championSkills = {
     }
 }
 
-type championSkins = {
+export type championSkins = {
     num: number,
     name: string
 }
@@ -20,8 +21,9 @@ export type championType = {
     lore: string,
     skins: championSkins[],
     spells: championSkills[],
+    passive: championSkills,
 }
 
-export type propsType = {
+export type championPropsType = {
     id: string
 }

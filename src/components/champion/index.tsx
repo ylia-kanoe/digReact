@@ -4,13 +4,15 @@ import { ChampionRole } from "../championRole";
 import { ChampionSkills } from "../championSkills";
 import { ChampionSkins } from "../championSkins";
 import styles from "./champion.module.scss"
+import { championType, championPropsType } from "./types";
+import React from "react";
 
-export function Champions(props) {
-    const [champion, setChampion] = useState(null);
+export function Champions(props: championPropsType) {
+    const [champion, setChampion] = useState<championType | null>(null);
 
     const getApiData = async () => {
-        const response = await ChampoinsApi.getChampion(props.id)
-        setChampion(response.data[props.id])
+        const { data } = await ChampoinsApi.getChampion(props.id)
+        setChampion(data[props.id] as championType)
     };
 
     useEffect(() => {

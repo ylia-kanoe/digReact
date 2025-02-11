@@ -12,18 +12,22 @@ type championSkinsDataDto = {
     name: string
 }
 
-export type championDataDto = {
+type championData = {
     id: string,
     name: string,
     title: string,
     lore: string,
     skins: championSkinsDataDto[],
     spells: championSkillsDataDto[],
-    passive: championSkillsDataDto[]
+    passive: championSkillsDataDto
     tags: string[]
 }
 
+export type championDataDto = {
+    data: Record<string, championData>
+}
+
 export type championsDataDto = {
-    data: Record<string, Omit<championDataDto, "lore" | "skins" | "spells" | "passive">>
+    data: Record<string, Omit<championData, "lore" | "skins" | "spells" | "passive">>
 }
 
