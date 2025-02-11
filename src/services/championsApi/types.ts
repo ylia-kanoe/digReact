@@ -24,6 +24,6 @@ export type championDataDto = {
 }
 
 export type championsDataDto = {
-    data: Record<string,Omit<championDataDto, "lore" | "skins" | "spells" | "passive">>
+    data: Record<string, Omit<championDataDto, "lore" | "skins" | "spells" | "passive">>
 }
 
